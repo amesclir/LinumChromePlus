@@ -61,9 +61,13 @@ argnames(con.lik2)
 #Una vez que tenemos lik y con.lik, sigo utilizando diversitree
 #Crear modelos ML con "lik" y con "con.lik"
 
-con.fit1 <- find.mle(con.lik1, rep(0.1,10), method="optim")
+con.fit1 <- find.mle(con.lik1, rep(0.1,10), method="subplex")
 
-con.fit2 <- find.mle(con.lik2, rep(0.1,6), method="optim")
+con.fit2 <- find.mle(con.lik2, rep(0.1,6), method="subplex")
+
+con.fit1$par
+con.fit2$par
+anova(con.fit1, constrained=con.fit2)
 
 ```
 
@@ -84,12 +88,12 @@ tree <- drop.tip(tree, "L_oligophyllum")
 #Read the data
 
 dat2 <- read.csv("Linum_distributionDataset.csv", sep=",")
-
+dat2
 
 #Convert data appropiate for analysis. 6 y 36 son el min y el max n de cromosomas
 
-setdiff(tree$tip.label, dat1$Name)
-setdiff(dat1$Name,tree$tip.label)
+setdiff(tree$tip.label, dat2$Name)
+setdiff(dat2$Name,tree$tip.label)
 
 ?datatoMatrix
 dat.mat2 <- datatoMatrix(x=dat2, range= c(6,36), hyper=T)
@@ -102,24 +106,41 @@ is.ultrametric(tree)
 
 ?make.mkn
 
-lik <- make.mkn(tree = tree, states= dat.mat, k=ncol(dat.mat), strict = F, control = list(method="ode"))
+lik <- make.mkn(tree = tree, states= dat.mat2, k=ncol(dat.mat2), strict = F, control = list(method="ode"))
 
 
 # constrain the likelihood function to a biologically realistic design
 
 ?constrainMkn
 
-con.lik <- constrainMkn(data = dat.mat,
+con.lik3 <- constrainMkn(data = dat.mat2,
                         lik = lik,
                         polyploidy = F,
                         hyper = T,
-                        constrain = list(drop.demi = T,
+                        constrain = list(drop.demi = F,
                                          drop.poly= F))
 
 
-# lets make sure we have the parameters we expect
+con.lik4 <- constrainMkn(data = dat.mat2,
+                        lik = lik,
+                        constrain = list(nometa = T))
 
-?argnames
-argnames(con.lik)
+# lets make sure we have the parameters we expect
+#?argnames
+argnames(lik)
+argnames(con.lik3)
+argnames(con.lik4)
+#Una vez que tenemos lik y con.lik, sigo utilizando diversitree
+#Crear modelos ML con "lik" y con "con.lik"
+
+con.fit3 <- find.mle(con.lik3, rep(0.1,10), method="subplex")
+
+con.fit4 <- find.mle(con.lik4, rep(0.1,6), method="subplex")
+
+con.fit3$par
+con.fit4$par
+
+anova(con.fit3, constrained=con.fit4)
+
 ```
 
