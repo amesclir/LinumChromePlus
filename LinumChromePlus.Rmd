@@ -144,3 +144,95 @@ anova(con.fit3, constrained=con.fit4)
 
 ```
 
+Setting up the data for ChromePlus with annual vs. perennial
+
+```{r}
+
+##Chromosome number and distribution##
+
+#Read the tree
+
+tree <- read.tree("Linum.tree")
+tree
+tree <- drop.tip(tree, "L_oligophyllum")
+
+#Read the data
+
+mydata3 <- read.csv ("./taxonomy.csv")
+
+setdiff(mydata3$Names2, tree$tip.label)
+setdiff(tree$tip.label,mydata3$Names2)
+mydata3$Names2 <- as.character(mydata3$Names2)
+mydata3$Names2[mydata3$Names2=="606"] <- "L_virgatum"
+mydata3$Names2[mydata3$Names2=="L_setaceum_Het"] <- "L_flos-carmini"
+mydata3$Names2[mydata3$Names2=="L_thumbergii"] <- "L_thunbergii"
+setdiff(mydata3$Names2, tree$tip.label)
+setdiff(tree$tip.label,mydata3$Names2)
+mydata3 <- mydata3[which(mydata3$Names2 %in% tree$tip.label),]
+setdiff(mydata3$Names2, tree$tip.label)
+setdiff(tree$tip.label,mydata3$Names2)
+
+dat3 <- dat2
+
+dat3[,3] <- mydata3[,8][match(dat2$Name,mydata3$Names2)]
+dat3
+#Convert data appropiate for analysis. 6 y 36 son el min y el max n de cromosomas
+
+setdiff(tree$tip.label, dat3$Name)
+setdiff(dat3$Name,tree$tip.label)
+
+dat3 <- dat3[dat3[,3]!="?",]
+setdiff(tree$tip.label, dat3$Name)
+setdiff(dat3$Name,tree$tip.label)
+tree <- drop.tip(tree,"L_prostratum")
+
+?datatoMatrix
+dat3[,3] <- as.numeric(dat3[,3])
+dat.mat3 <- datatoMatrix(x=dat3, range= c(6,36), hyper=T)
+
+
+# make the basic likelihood function
+
+?is.ultrametric
+is.ultrametric(tree)
+
+?make.mkn
+
+lik <- make.mkn(tree = tree, states= dat.mat3, k=ncol(dat.mat3), strict = F, control = list(method="ode"))
+
+
+# constrain the likelihood function to a biologically realistic design
+
+?constrainMkn
+
+con.lik5 <- constrainMkn(data = dat.mat3,
+                        lik = lik,
+                        polyploidy = F,
+                        hyper = T,
+                        constrain = list(drop.demi = F,
+                                         drop.poly= F))
+
+
+con.lik6 <- constrainMkn(data = dat.mat3,
+                        lik = lik,
+                        constrain = list(nometa = T))
+
+# lets make sure we have the parameters we expect
+#?argnames
+argnames(lik)
+argnames(con.lik5)
+argnames(con.lik6)
+#Una vez que tenemos lik y con.lik, sigo utilizando diversitree
+#Crear modelos ML con "lik" y con "con.lik"
+
+con.fit5 <- find.mle(con.lik5, rep(0.1,10), method="subplex")
+
+con.fit6 <- find.mle(con.lik6, rep(0.1,6), method="subplex")
+
+con.fit5$par
+con.fit6$par
+
+anova(con.fit5, constrained=con.fit6)
+
+```
+

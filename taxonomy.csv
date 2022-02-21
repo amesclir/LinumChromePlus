@@ -1,0 +1,115 @@
+Names2,Taxon,Section,Distribution,Style condition1,Style condition2,Style condition 3,Life History
+Re_indica,Reinwardtia indica,Outgroup,"Afganistan, Pakistan",1,1,1,1
+T_sinensis,Tirpitzia sinensis,Outgroup,China,1,1,1,1
+A_pubescens,Anisadenia pubescens,Outgroup,China,0,0,0,1
+L_velutinum,L. velutinum,Syllinum,Iraq,?,?,?,1
+L_mucronatum2,L. mucronatum B,Syllinum,Turkey,1,1,1,1
+L_mucronatum1,L. mucronatum A,Syllinum,Turkey,1,1,1,1
+L_syriacum,L. syriacum,Syllinum,Syria,?,?,?,1
+L_album,L. album,Syllinum,"India, Iran",1,1,1,1
+L_triflorum,L. triflorum,Syllinum,Turkey,1,1,1,1
+L_flavum,L. flavum,Syllinum,N. E. Med.,1,1,1,1
+L_elegans,L. elegans,Syllinum,Greece,1,1,1,1
+L_arboreum,L. arboreum,Syllinum,"Turkey, Greece",1,1,1,1
+L_cariense,L. cariense ,Syllinum,Turkey,?,?,?,1
+L_campanulatum,L. campanulatum,Syllinum,"Spain, France, Italy",1,1,1,1
+L_aretioides,L. aretioides ,Syllinum,Turkey,1,1,1,1
+L_capitatum,L. capitatum ,Syllinum,Italy,1,1,1,1
+L_tauricum,L. tauricum,Syllinum,Turkey,1,1,1,1
+L_gyaricum,L. gyaricum ,Syllinum,Greece,1,1,1,1
+L_nodiflorum,L. nodiflorum,Syllinum,"Turkey, Italy",5,2,0,0
+L_maritimum,L. maritimum,Linopsis,"Spain, Italy",1,1,1,1
+L_mumbyanum,L. mumbyanum,Linopsis,Morocco,1,1,1,1
+L_numidicum,L. numidicum,Linopsis,Morocco,1,1,1,1
+L_subasperifolium,L. subasperifolium,Linopsis,Morocco,1,1,1,0
+L_tenue2,L. tenue B,Linopsis,Morocco,1,1,1,0
+L_tenue1,L. tenue A,Linopsis,Morocco,1,1,1,0
+L_trigynum,L. trigynum,Linopsis,Cosmopolitan,0,0,0,0
+L_corymbulosum,L. corymbulosum,Linopsis,Greece,0,0,0,0
+L_catharticum,L. catharticum,Cathartolinum,N. Med.,0,0,0,0
+L_setaceum,L. setaceum,Linopsis,"Spain, Portugal, Morocco",0,0,0,0
+L_setaceum_Het,L. floscarminii,Linopsis,Morocco,1,1,1,0
+L_suffruticosum1,L. suffruticosum A,Linopsis,Spain,7,1,1,1
+L_tenuifolium2,L. tenuifolium B,Linopsis,Turkey,4,0,0,1
+L_tenuifolium1,L. tenuifolium A,Linopsis,Spain,4,0,0,1
+L_suffruticosum2,L. suffruticosum B,Linopsis,Italy,7,1,1,1
+L_volkensii,L. volkensii,Linopsis,"Tanzania, South Africa",3,2,0,?
+L_gallicum,L. gallicum,Linopsis,Greece,0,0,0,0
+L_liburnicum,L. liburnicum,Linopsis,Greece,0,0,0,0
+L_corymbiferum,L. corymbiferum,Linopsis,Algeria,1,1,1,1
+L_tenue3,L. tenue C,Linopsis,Algeria,1,1,1,0
+L_strictum,L. strictum,Linopsis,Cosmopolitan,0,0,0,0
+606,L. virgatum ,Linopsis,Algeria,1,1,1,0
+L_striatum,L. striatum,Linopsis,EEUU (Ontario to Florida and Texas),3,2,0,1
+L_kingii,L. kingii,Linopsis,C. S. EEUU,4,0,0,1
+L_vernale,L. vernale,Linopsis,"C. EEUU (Texas, New Mexico)",3,2,0,0
+L_rupestre,L. rupestre,Linopsis,C. S. EEUU,3,2,0,1
+C_selaginoides,Cliococca selaginoides,Outgroup,"Chile, Argentina, Uruguay, Brasil",0,0,0,1
+L_macraei,L. macraei,Linopsis,S. America (Chile),3,2,0,1
+L_prostratum,L. prostratum,Linopsis,S America (S Peru-N Chile),5,2,0,?
+L_oligophyllum,L. oligophyllum,Linopsis,S America (Peru and Ecuador),?,?,?,1
+L_littorale,L. littorale,Linopsis,"S. America (Brasil, Uruguay)",5,0,0,1
+L_quadrifolium,L. quadrifolium,Linopsis,South Africa,3,2,0,1
+L_thesioides,L. thesioides,Linopsis,South Africa,3,2,0,1
+L_thumbergii,L. thunbergii,Linopsis,South Africa,3,2,0,1
+L_heterostylum,L. heterostylum,Linopsis,South Africa,1,1,1,1
+L_esterhuysenae,L. esterhuysenae,Linopsis,South Africa,3,2,0,1
+L_gracile,L. gracile,Linopsis,South Africa,3,2,0,1
+L_acuticarpum,L. acuticarpum,Linopsis,South Africa,3,2,0,1
+L_villosum,L. villosum,Linopsis,South Africa,3,2,0,1
+L_pungens,L. pungens,Linopsis,South Africa,3,2,0,1
+L_comptonii,L. comptonii,Linopsis,South Africa,1,1,1,1
+L_africanum,L. africanum,Linopsis,South Africa,3,2,0,1
+L_aethiopicum,L. aethiopicum,Linopsis,South Africa,3,2,0,1
+L_adustum,L. adustum,Linopsis,South Africa,3,2,0,1
+L_brevistylum,L. brevistylum,Linopsis,South Africa,3,2,0,1
+S_digynum,Sclerolinon digynum,Outgroup,EEUU,0,0,0,0
+He_micranthum,Hesperolinon micranthum,Outgroup,EEUU (Oregon to middle California),4,0,0,0
+Ra_linoides,Radiola linoides,Outgroup,Cosmopolitan,4,0,0,0
+L_marginale,L. marginale,Linum,Australia,0,0,0,?
+L_hologynum,L. hologynum,Linum,Greece,3,2,0,1
+L_villarianum,L. villarianum,Linum,Morocco,0,0,0,1
+L_bienne,L. bienne,Linum,Cosmopolitan,0,0,0,0
+L_usitatissimum,L. usitatissimum,Linum,Cosmopolitan,0,0,0,0
+L_narbonense,L. narbonense,Linum,"Spain, Italy, France",1,1,1,1
+L_decumbens2,L. decumbens B,Linum,Italy,0,0,0,0
+L_decumbens1,L. decumbens A,Linum,Italy,0,0,0,0
+L_grandiflorum,L. grandiflorum,Linum,Algeria,6,3,1,0
+L_meletonis,L. meletonis ,Linum,Turkey,?,?,?,1
+L_obtusatum,L. obtusatum ,Linum,Turkey,1,1,1,1
+L_pycnophyllum,L. pycnophyllum ,Linum,Turkey,1,1,1,1
+L_empetrifolium2,L. empetrifolium B,Linum,Turkey,1,1,1,1
+L_empetrifolium1,L. empetrifolium A,Linum,Turkey,1,1,1,1
+L_perenne,L. perenne,Linum,N. Med.,1,1,1,1
+L_alpinum,L. alpinum,Linum,"Spain, France, Italy, Austria, Serbia",1,1,1,1
+L_punctatum1,L. punctatum A,Linum,Italy,1,1,1,1
+L_tommasinii,L. tommasinii,Linum,Italy,1,1,1,1
+L_austriacum,L. austriacum ,Linum,Med.,1,1,1,1
+L_lewisii,L. lewisii,Linum,"EEUU (Keewatin to Alaska, Texas, N Mexico & California)",3,2,0,1
+L_austr_mauritanicum,L. austriacum mauritanicum,Linum,Morocco,1,1,1,1
+L_pallescens,L. pallescens,Linum,"Rusia, China",0,0,0,1
+L_austr_gomaricum,L. austriacum gomaricum,Linum,Morocco,1,1,1,1
+L_lanuginosum,L. lanuginosum,Dasylinum,Tajikistan,1,1,1,1
+L_punctatum2,L. punctatum B ,Linum,Italy,1,1,1,1
+L_leonii,L. leonii,Linum,Germany,0,0,0,1
+L_virgultorum,L. virgultorum,Linum,Turkey,1,1,1,0
+L_aroanium2,L. aroaniumB,Linum,"Turkey, Greece",1,1,1,1
+L_aroanium1,L. aroaniumA,Linum,"Turkey, Greece",1,1,1,1
+L_tmoleum,L. tmoleum,Linum,Turkey,1,1,1,0
+L_bungei,L. bungei ,Dasylinum,Iran,?,?,?,1
+L_nervosum,L. nervosum,Linum,Turkey,1,1,1,1
+L_viscosum,L. viscosum,Dasylinum,Spain,1,1,1,1
+L_unguiculatum,L. unguiculatum ,Dasylinum,Turkey,?,?,?,1
+L_densiflorum1,L. densiflorum A,Dasylinum,Azerbaijan,1,1,1,1
+L_hypericifolium,L. hypericifolium,Dasylinum,Turkey,1,1,1,1
+L_densiflorum2,L. densiflorum B,Dasylinum,Turkey,1,1,1,1
+L_spathulatum,L. spathulatum ,Dasylinum,Greece,1,1,1,1
+L_hirsutum,L. hirsutum,Dasylinum,Turkey,2,1,1,1
+L_olympicum,L. olympicum ,Dasylinum,"Turkey, Greece",?,?,?,1
+L_seljukorum,L. seljukorum ,Dasylinum,Turkey,0,0,0,0
+L_pubescens,L. pubescens,Dasylinum,Syria,1,1,1,0
+L_stelleroides,L. stelleroides,Linum,China and Japan,0,0,0,0
+Hu_busseana,Hugonia busseana,Outgroup,Malawi,0,0,0,1
+Humiria_balsamifera,Humiria balsamifera,Outgroup,Brasil,0,0,0,1
+Viola_pubescens,Viola pubescens,Outgroup,EEUU and Canada,0,0,0,1
+Hypericum_perforatum,Hypericum perforatum,Outgroup,Med. Basin,0,0,0,1
