@@ -79,8 +79,8 @@ ax <- pretty(b:e, n = 24) # Make a neat vector for the breakpoints
 ax
 h1 <- hist( p1, breaks = ax, plot = F)
 h2 <- hist( p2, breaks = ax, plot = F)
-c1 <- rgb(173,216,230,max = 255, alpha = 80, names = "lt.blue")
-c2 <- rgb(255,192,203, max = 255, alpha = 80, names = "lt.pink")
+c1 <- rgb(0,0,1,1/4)
+c2 <- rgb(1,0,0,1/4)
 plot(h2, col = c2, xlim= c(0,37), ylim = c(0,14), main="Heterostyly") # Plot 1st histogram using a transparent color
 plot(h1, col = c1, add = TRUE) # Add 2nd 
 
@@ -166,8 +166,8 @@ ax <- pretty(b:e, n = 24) # Make a neat vector for the breakpoints
 ax
 h1 <- hist( p1, breaks = ax, plot = F)
 h2 <- hist( p2, breaks = ax, plot = F)
-c1 <- rgb(173,216,230,max = 255, alpha = 80, names = "lt.blue")
-c2 <- rgb(255,192,203, max = 255, alpha = 80, names = "lt.pink")
+c1 <- rgb(0,0,1,1/4)
+c2 <- rgb(1,0,0,1/4)
 plot(h1, col = c1, xlim= c(0,37), ylim = c(0,20), main="Distribution") # Plot 1st histogram using a transparent color
 plot(h2, col = c2, add = TRUE) # Add 2nd 
 
@@ -288,10 +288,10 @@ ax <- pretty(b:e, n = 24) # Make a neat vector for the breakpoints
 ax
 h1 <- hist( p1, breaks = ax, plot = F)
 h2 <- hist( p2, breaks = ax, plot = F)
-c1 <- rgb(173,216,230,max = 255, alpha = 80, names = "lt.blue")
-c2 <- rgb(255,192,203, max = 255, alpha = 80, names = "lt.pink")
-plot(h2, col = c2, xlim= c(0,37), ylim = c(0,14), main="Habit") # Plot 1st histogram using a transparent color
-plot(h1, col = c1, add = TRUE) # Add 2nd 
+c1 <- rgb(0,0,1,1/4)
+c2 <- rgb(1,0,0,1/4)
+plot(h1, col = c1, xlim= c(0,37), ylim = c(0,14), main="Habit") # Plot 1st histogram using a transparent color
+plot(h2, col = c2, add = TRUE) # Add 2nd 
 
 ```
 
