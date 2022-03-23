@@ -3,6 +3,8 @@ title: "LinumChromePlus"
 author: "Marcial Escudero"
 date: "2/14/2022"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 Setting up the data for ChromePlus with stylar condition
@@ -68,6 +70,19 @@ con.fit2 <- find.mle(con.lik2, rep(0.1,6), method="subplex")
 con.fit1$par
 con.fit2$par
 anova(con.fit1, constrained=con.fit2)
+
+p1 <- dat1[,2][dat1[,3]==0]
+p2 <- dat1[,2][dat1[,3]==1]
+b <- min(c(p1,p2)) -1 # Set the minimum for the breakpoints
+e <- max(c(p1,p2)) +1 # Set the maximum for the breakpoints
+ax <- pretty(b:e, n = 12) # Make a neat vector for the breakpoints
+ax
+h1 <- hist( p1, breaks = ax, plot = F)
+h2 <- hist( p2, breaks = ax, plot = F)
+c1 <- rgb(173,216,230,max = 255, alpha = 80, names = "lt.blue")
+c2 <- rgb(255,192,203, max = 255, alpha = 80, names = "lt.pink")
+plot(h2, col = c2, xlim= c(0,37), ylim = c(0,14), main="Heterostyly") # Plot 1st histogram using a transparent color
+plot(h1, col = c1, add = TRUE) # Add 2nd 
 
 ```
 
@@ -141,6 +156,20 @@ con.fit3$par
 con.fit4$par
 
 anova(con.fit3, constrained=con.fit4)
+
+
+p1 <- dat2[,2][dat2[,3]==0]
+p2 <- dat2[,2][dat2[,3]==1]
+b <- min(c(p1,p2)) -1 # Set the minimum for the breakpoints
+e <- max(c(p1,p2)) +1 # Set the maximum for the breakpoints
+ax <- pretty(b:e, n = 12) # Make a neat vector for the breakpoints
+ax
+h1 <- hist( p1, breaks = ax, plot = F)
+h2 <- hist( p2, breaks = ax, plot = F)
+c1 <- rgb(173,216,230,max = 255, alpha = 80, names = "lt.blue")
+c2 <- rgb(255,192,203, max = 255, alpha = 80, names = "lt.pink")
+plot(h1, col = c1, xlim= c(0,37), ylim = c(0,20), main="Distribution") # Plot 1st histogram using a transparent color
+plot(h2, col = c2, add = TRUE) # Add 2nd 
 
 ```
 
@@ -233,6 +262,36 @@ con.fit5$par
 con.fit6$par
 
 anova(con.fit5, constrained=con.fit6)
+
+mcmc.fit5 <- mcmc(con.lik5, coef(con.fit5), 100000, w = .3)
+
+#relationship between annual vs perennial and diversification rates
+phy <- tree
+states <- dat3[,3]
+names(states) <- dat3[,1]
+lik <- make.bisse(phy, states)
+lik
+p <- starting.point.bisse(phy)
+p
+fit <- find.mle(lik, p)
+fit
+lik.l <- constrain(lik, mu1 ~ mu0)
+fit.l <- find.mle(lik.l, p[argnames(lik.l)])
+round(rbind(full=coef(fit), equal.l=coef(fit.l, TRUE)), 3)
+anova(fit, equal.l=fit.l)
+
+p1 <- dat3[,2][dat3[,3]==0]
+p2 <- dat3[,2][dat3[,3]==1]
+b <- min(c(p1,p2)) -1 # Set the minimum for the breakpoints
+e <- max(c(p1,p2)) +1 # Set the maximum for the breakpoints
+ax <- pretty(b:e, n = 12) # Make a neat vector for the breakpoints
+ax
+h1 <- hist( p1, breaks = ax, plot = F)
+h2 <- hist( p2, breaks = ax, plot = F)
+c1 <- rgb(173,216,230,max = 255, alpha = 80, names = "lt.blue")
+c2 <- rgb(255,192,203, max = 255, alpha = 80, names = "lt.pink")
+plot(h2, col = c2, xlim= c(0,37), ylim = c(0,14), main="Habit") # Plot 1st histogram using a transparent color
+plot(h1, col = c1, add = TRUE) # Add 2nd 
 
 ```
 
