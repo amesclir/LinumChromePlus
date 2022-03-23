@@ -75,7 +75,7 @@ p1 <- dat1[,2][dat1[,3]==0]
 p2 <- dat1[,2][dat1[,3]==1]
 b <- min(c(p1,p2)) -1 # Set the minimum for the breakpoints
 e <- max(c(p1,p2)) +1 # Set the maximum for the breakpoints
-ax <- pretty(b:e, n = 12) # Make a neat vector for the breakpoints
+ax <- pretty(b:e, n = 24) # Make a neat vector for the breakpoints
 ax
 h1 <- hist( p1, breaks = ax, plot = F)
 h2 <- hist( p2, breaks = ax, plot = F)
@@ -162,7 +162,7 @@ p1 <- dat2[,2][dat2[,3]==0]
 p2 <- dat2[,2][dat2[,3]==1]
 b <- min(c(p1,p2)) -1 # Set the minimum for the breakpoints
 e <- max(c(p1,p2)) +1 # Set the maximum for the breakpoints
-ax <- pretty(b:e, n = 12) # Make a neat vector for the breakpoints
+ax <- pretty(b:e, n = 24) # Make a neat vector for the breakpoints
 ax
 h1 <- hist( p1, breaks = ax, plot = F)
 h2 <- hist( p2, breaks = ax, plot = F)
@@ -284,7 +284,7 @@ p1 <- dat3[,2][dat3[,3]==0]
 p2 <- dat3[,2][dat3[,3]==1]
 b <- min(c(p1,p2)) -1 # Set the minimum for the breakpoints
 e <- max(c(p1,p2)) +1 # Set the maximum for the breakpoints
-ax <- pretty(b:e, n = 12) # Make a neat vector for the breakpoints
+ax <- pretty(b:e, n = 24) # Make a neat vector for the breakpoints
 ax
 h1 <- hist( p1, breaks = ax, plot = F)
 h2 <- hist( p2, breaks = ax, plot = F)
