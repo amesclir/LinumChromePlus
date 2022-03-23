@@ -259,7 +259,7 @@ con.fit5 <- find.mle(con.lik5, rep(0.1,10), method="subplex")
 con.fit6 <- find.mle(con.lik6, rep(0.1,6), method="subplex")
 
 con.fit5$par
-con.fit6$par
+DATcon.fit6$par
 
 anova(con.fit5, constrained=con.fit6)
 
