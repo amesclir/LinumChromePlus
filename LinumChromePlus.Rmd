@@ -293,5 +293,19 @@ c2 <- rgb(1,0,0,1/4)
 plot(h1, col = c1, xlim= c(0,37), ylim = c(0,14), main="Habit") # Plot 1st histogram using a transparent color
 plot(h2, col = c2, add = TRUE) # Add 2nd 
 
+habit <- dat3[,3]
+names(habit) <- dat3[,1]
+habit[habit==1] <- 2
+habit[habit==0] <- 1
+my.ER <- ace(habit, phy, type = "discrete", model = "ER")
+my.ARD <- ace(habit, phy, type = "discrete", model = "ARD")
+my.ER
+my.ARD
+
+plot(phy, type = "c", FALSE, label.offset = 1, cex = 0.6)
+co <- c("blue", "yellow")
+tiplabels(pch = 22, bg = co[as.numeric(habit[match(phy$tip.label,names(habit))])], cex = 0.6, adj = 1)
+nodelabels(thermo = my.ER$lik.anc, piecol = co, cex = 0.4)
+
 ```
 
